@@ -14,7 +14,7 @@ int main(void)
 
 	while (i < 10)
 	{
-	j = 0;
+	j = i + 1;
 		while (j < 10)
 		{
 			if (i == j)
@@ -24,7 +24,7 @@ int main(void)
 			}
 			putchar('0' + i);
 			putchar('0' + j);
-			if (i < 9 || j < 8)
+			if (i + j != 17)
 			{
 				putchar(',');
 				putchar(' ');
