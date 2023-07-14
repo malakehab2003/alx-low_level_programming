@@ -14,6 +14,7 @@ int main(void)
 	{
 		if (i == 16 || i == 4)
 		{
+			i++;
 			continue;
 		}
 		putchar('a' + i);
