@@ -13,8 +13,8 @@ int main(void)
 	while (i < 26)
 	{
 		putchar('a' + i);
-		putchar('\n');
 		i++;
 	}
+	putchar('\n');
 	return (0);
 }
