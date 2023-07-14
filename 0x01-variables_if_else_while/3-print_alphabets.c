@@ -13,7 +13,11 @@ int main(void)
         while (i < 26)
         {
                 putchar('a' + i);
-		putchar('A' + i);
+                i++;
+        }
+	while (i < 51)
+        {
+                putchar('a' + i);
                 i++;
         }
         putchar('\n');
