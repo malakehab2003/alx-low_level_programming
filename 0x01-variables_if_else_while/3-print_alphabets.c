@@ -15,9 +15,10 @@ int main(void)
                 putchar('a' + i);
                 i++;
         }
-	while (i < 51)
+	i = 0;
+	while (i < 26)
         {
-                putchar('a' + i);
+                putchar('A' + i);
                 i++;
         }
         putchar('\n');
