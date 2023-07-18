@@ -6,11 +6,15 @@
  * add - Add two numbers
  *
  * Return: the sum of the number
+ *
+ *@x:number to sum
+ *@y:number to sum
 */
 
 int add(int x, int y)
 {
 	int r;
+
 	r = x + y;
 	return (r);
 }
