@@ -8,7 +8,7 @@
  * Return: no retutn
 */
 
-jack_bauer(void)
+void jack_bauer(void)
 {
 	int i = 0, j = 0;
 
