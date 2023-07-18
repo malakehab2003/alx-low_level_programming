@@ -1,13 +1,21 @@
-#include "main.h"
-#include "print_alphabet.c"
+#include <unistd.h>
+#include <stdio.h>
+
 
 /**
- * main - check the code
+ * print_alphabet - prints all the alphabets in lower case
  *
- * Return: Always 0.
+ * Return: 0 when success
 */
-int main(void)
+
+
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+        int i = 0;
+        while (i < 26)
+        {
+                putchar('a' + i);
+                i++;
+        }
+        putchar('\n');
 }
