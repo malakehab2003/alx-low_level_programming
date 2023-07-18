@@ -6,10 +6,31 @@
  *
  * Return: 1 if the char is alpha
  * Return: 0 otherwise
+ *
+ * @c: the char to check if alpha or not
 */
 
 int _isalpha(int c)
 {
-	int i = ;
-	while
+	int i = 97, j = 65;
+
+	while (i < 123)
+	{
+		if (i == c)
+		{
+			return (1);
+		}
+		i++;
+	}
+
+	while (j < 91)
+	{
+		if (j == c)
+		{
+			return (1);
+		}
+		j++;
+	}
+
+	retutn (0);
 }
