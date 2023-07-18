@@ -32,5 +32,5 @@ int _isalpha(int c)
 		j++;
 	}
 
-	retutn (0);
+	return (0);
 }
