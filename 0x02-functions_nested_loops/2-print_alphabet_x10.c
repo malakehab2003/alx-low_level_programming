@@ -13,6 +13,7 @@ void print_alphabet_x10(void)
 
 	while (count < 10)
 	{
+		alpha = 0;
 		while (alpha < 26)
 		{
 			putchar('a' + alpha);
