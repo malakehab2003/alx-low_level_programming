@@ -1,4 +1,4 @@
-#include <stdio.h>
+i#include <stdio.h>
 #include <unistd.h>
 #include "main.h"
 
@@ -23,7 +23,10 @@ void times_table(void)
 				_putchar((m / 10) + '0');
 				_putchar((m % 10) + '0');
 			}
-			_putchar('0' + m);
+			else
+			{
+				_putchar('0' + m);
+			}
 			if (j == 9)
 			{
 				_putchar('\n');
