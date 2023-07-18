@@ -5,6 +5,8 @@
  *
  * Return: 1 is lower
  * otherwise return 0
+ *
+ *@c: the char to check if it lower case or not
 */
 
 int _islower(char c)
