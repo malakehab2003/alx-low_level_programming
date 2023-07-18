@@ -5,7 +5,7 @@
  * _isalpha - check if the char c is alpha or not
  *
  * Return: 1 if the char is alpha
- * Return: 0 otherwise
+ * otherwise: 0 otherwise
  *
  * @c: the char to check if alpha or not
 */
