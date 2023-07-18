@@ -39,12 +39,8 @@ void times_table(void)
 					if ((m / 10) == 0)
 					{
 						_putchar(' ');
-						_putchar(' ');
 					}
-					else
-					{
 						_putchar(' ');
-					}
 				}
 			}
 			j++;
