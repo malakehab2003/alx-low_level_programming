@@ -21,23 +21,27 @@ void times_table(void)
 			if (m > 9)
 			{
 				_putchar((m / 10) + '0');
+				_putchar((m % 10) + '0');
 			}
 			_putchar('0' + m);
-			if (m == 18)
+			if (j == 9)
 			{
 				_putchar('\n');
 			}
 			else
 			{
-				_putchar(',');
-				if ((m / 10) == 0)
+				if (j != 9)
 				{
-					_putchar(' ');
-					_putchar(' ');
-				}
-				else
-				{
-					_putchar(' ');
+					_putchar(',');
+					if ((m / 10) == 0)
+					{
+						_putchar(' ');
+						_putchar(' ');
+					}
+					else
+					{
+						_putchar(' ');
+					}
 				}
 			}
 			j++;
