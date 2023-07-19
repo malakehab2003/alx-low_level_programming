@@ -11,7 +11,7 @@
 */
 
 int i = 0, j = 0, m;
-void process(void);
+void process(int );
 
 void print_times_table(int n)
 {
@@ -23,7 +23,7 @@ void print_times_table(int n)
 			j = 0;
 			while (j <= n)
 			{
-				process;
+				process(n);
 				j++;
 			}
 			i++;
@@ -31,7 +31,7 @@ void print_times_table(int n)
 	}
 }
 
-void process(void)
+void process(int n)
 {
 	m = i * j;
 	if (m > 9 && m < 100)
