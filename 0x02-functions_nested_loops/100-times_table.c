@@ -4,17 +4,17 @@
 
 /**
  * print_times_table - Prints the time table till n
- * prcess: make the process
+ * process -  make the process
  * Return: No return
  *
  *@n: the end point
 */
 
-int i = 0, j = 0, m;
-void process(int );
+void process(int);
 
 void print_times_table(int n)
 {
+	int i = 0, j = 0, m;
 
 	if (n <= 15 && n >= 0)
 	{
@@ -33,6 +33,7 @@ void print_times_table(int n)
 
 void process(int n)
 {
+	int i = 0, j = 0, m;
 	m = i * j;
 	if (m > 9 && m < 100)
 	{
