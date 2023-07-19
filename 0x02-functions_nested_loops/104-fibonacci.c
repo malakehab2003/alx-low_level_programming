@@ -2,15 +2,6 @@
 #include <unistd.h>
 #include "main.h"
 
-/**
- * main - Entry point
- *
- *numLength - get the numLength
- *
- *@num: the num to get its length
- * Return: Always 0 (Success)
-*/
-
 
 /**
  *numLength - returns the length of string
@@ -35,6 +26,15 @@ int numLength(int num)
 
 	return (length);
 }
+
+/**
+ * main - Entry point
+ *
+ *numLength - get the numLength
+ *
+ *@num: the num to get its length
+ * Return: Always 0 (Success)
+*/
 
 int main(void)
 {
