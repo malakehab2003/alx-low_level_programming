@@ -13,7 +13,7 @@
 
 
 /**
- *numLength - get the numLength
+ *numLength - get the length of the digits of num that enter
  *
  *@num: the num to get its length
  * Return: numlength
