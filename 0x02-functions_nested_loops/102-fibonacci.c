@@ -8,19 +8,22 @@
 
 int main(void)
 {
-	int fib[50] = {1, 2};
-	int i = 2;
-	int j = 0;
-	while (j < 49) 
+	int count;
+	unsigned long fib1 = 0, fib2 = 1, sum;
+
+	for (count = 0; count < 50; count++)
 	{
-		printf("%d, ", fib[j]);
-		j++;
-	}
-	printf("%d\n", fib[49]);
-	while (i < 50)
-	{
-		fib[i] = fib[i-1] + fib[i-2];
-		i++;
+		sum = fib1 + fib2;
+		printf("%lu", sum);
+
+		fib1 = fib2;
+		fib2 = sum;
+
+		if (count == 49)
+			printf("\n");
+
+		else
+			printf(", ");
 	}
 	return 0;
 }
