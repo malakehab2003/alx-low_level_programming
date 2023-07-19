@@ -4,13 +4,13 @@
 
 /**
  * print_times_table - Prints the time table till n
- *
+ * prcess: make the process
  * Return: No return
  *
  *@n: the end point
 */
 
-void process(void)
+void process(void);
 
 void print_times_table(int n)
 {
@@ -27,7 +27,7 @@ void print_times_table(int n)
 				j++;
 			}
 			i++;
-		}	
+		}
 	}
 }
 
