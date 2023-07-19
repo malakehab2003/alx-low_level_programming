@@ -4,7 +4,9 @@
 
 /**
  * main - Entry point
+ * numLength - get the numLength
  *
+ *@num: the num to get its length
  * Return: Always 0 (Success)
 */
 
@@ -52,7 +54,8 @@ int main(void)
 
 		if (count != 98)
 			printf(", ");
-		else printf("\n");
+		else
+		printf("\n");
 	}
 	return (0);
 }
