@@ -13,10 +13,11 @@
 
 
 /**
- *numLength - get the length of the digits of num that enter
+ *numLength - returns the length of string
  *
  *@num: the num to get its length
- * Return: numlength
+ *
+ * Return: number of digits
 */
 
 int numLength(int num)
