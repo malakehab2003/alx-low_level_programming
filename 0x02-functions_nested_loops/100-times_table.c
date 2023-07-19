@@ -10,11 +10,11 @@
  *@n: the end point
 */
 
+int i = 0, j = 0, m;
 void process(void);
 
 void print_times_table(int n)
 {
-	int i = 0, j = 0, m;
 
 	if (n <= 15 && n >= 0)
 	{
@@ -23,7 +23,7 @@ void print_times_table(int n)
 			j = 0;
 			while (j <= n)
 			{
-				process
+				process;
 				j++;
 			}
 			i++;
