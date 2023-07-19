@@ -14,11 +14,11 @@ int numLength(int num)
 
 	if (!num)
 		return (1);
-	
+
 	while (num)
 	{
 		num = num / 10;
-		length +=1;
+		length += 1;
 	}
 
 	return (length);
@@ -44,7 +44,7 @@ int main(void)
 		printf("%lu", f1);
 
 		sum = (f1 + f2) % mx;
-		sumo = f1o + f2o +(f1 + f2) / mx;
+		sumo = f1o + f2o + (f1 + f2) / mx;
 		f1 = f2;
 		f1o = f2o;
 		f2 = sum;
