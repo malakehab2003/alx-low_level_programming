@@ -10,63 +10,38 @@
  *@n: the end point
 */
 
-void process(int);
-
 void print_times_table(int n)
 {
-	int i = 0, j = 0;
+	int prod, mult, num;
 
 	if (n <= 15 && n >= 0)
 	{
-		while (i <= n)
+		for (num = 0; num <= n; num++)
 		{
-			j = 0;
-			while (j <= n)
+			_putchar(48);
+			for (mult = 1; mult <= n; mult++)
 			{
-				process(n);
-				j++;
+				_putchar(',');
+				_putchar(' ');
+
+				prod = num * mult;
+
+				if (prod <= 9)
+					_putchar(' ');
+				if (prod <= 99)
+					_putchar(' ');
+
+				if (prod >= 100)
+				{
+					_putchar((prod / 100) + 48);
+					_putchar((prod / 10) % 10 + 48);
+				}
+				else if (prod <= 99 && prod >= 10)
+					_putchar((prod / 10) + 48);
+
+				_putchar((prod % 10) + 48);
 			}
-			i++;
-		}
-	}
-}
-
-void process(int n)
-{
-	int i = 0, j = 0, m;
-	m = i * j;
-	if (m > 9 && m < 100)
-	{
-		_putchar(' ');
-		_putchar((m / 10) + '0');
-		_putchar((m % 10) + '0');
-	}
-	else if (m < 10)
-	{
-		if (j > 0)
-		{
-			_putchar(' ');
-			_putchar(' ');
-		}
-		_putchar('0' + m);
-	}
-	else
-	{
-		_putchar((m / 100) + '0');
-		_putchar(((m / 10) % 10) + '0');
-		_putchar((m % 10) + '0');
-	}
-
-	if (j == n)
-	{
-		_putchar('\n');
-	}
-	else
-	{
-		if (j != n)
-		{
-			_putchar(',');
-			_putchar(' ');
+			-putchar('\n');
 		}
 	}
 }
