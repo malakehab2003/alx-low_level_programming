@@ -11,6 +11,14 @@
  * Return: Always 0 (Success)
 */
 
+
+/**
+ *numLength - get the numLength
+ *
+ *@num: the num to get its length
+ * Return: numlength
+*/
+
 int numLength(int num)
 {
 	int length = 0;
