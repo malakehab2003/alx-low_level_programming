@@ -30,9 +30,7 @@ int numLength(int num)
 /**
  * main - Entry point
  *
- *numLength - get the numLength
  *
- *@num: the num to get its length
  * Return: Always 0 (Success)
 */
 
