@@ -33,7 +33,7 @@ int main(void)
 	{
 		if (f1o > 0)
 			printf("%lu", f1o);
-		initia10s = numLenth(mx) - 1 - numLength(f1);
+		initia10s = numLength(mx) - 1 - numLength(f1);
 
 		while (f1o > 0 && initia10s > 0)
 		{
@@ -41,7 +41,7 @@ int main(void)
 			initia10s--;
 		}
 
-		printf("lu",f1);
+		printf("lu", f1);
 
 		sum = (f1 + f2) % mx;
 		sumo = f1o + f2o +(f1 + f2) / mx;
