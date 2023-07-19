@@ -14,7 +14,7 @@ void process(int);
 
 void print_times_table(int n)
 {
-	int i = 0, j = 0, m;
+	int i = 0, j = 0;
 
 	if (n <= 15 && n >= 0)
 	{
