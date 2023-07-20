@@ -30,10 +30,7 @@ void more_numbers(void)
 			}
 			i++;
 		}
-		if (count != 9)
-		{
-			_putchar('\n');
-		}
+		_putchar('\n');
 		count++;
 	}
 
