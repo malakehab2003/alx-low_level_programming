@@ -4,8 +4,9 @@
 #include "6-print_line.c"
 #include "7-print_diagonal.c"
 #include "8-print_square.c"
+#include "10-print_triangle.c"
 
 int main(void)
 {
-	print_square(3);
+	print_triangle(3);
 }
