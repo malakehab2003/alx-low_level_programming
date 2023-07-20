@@ -12,7 +12,7 @@ int main(void)
 {
 	long int n = 612852475143;
 	long int factor = 2;
-    
+
 	while (n > 1)
 	{
 		if (n % factor == 0)
@@ -24,7 +24,7 @@ int main(void)
 			factor++;
 		}
 	}
-    
-    printf("%ld\n", factor);
-    return 0;
+
+	printf("%ld\n", factor);
+	return (0);
 }
