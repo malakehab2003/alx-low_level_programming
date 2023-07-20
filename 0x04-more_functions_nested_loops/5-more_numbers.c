@@ -8,24 +8,24 @@
 
 void more_numbers(void)
 {
-	int i = 48, j = 48, count = 0;
+	int i = 0, j = 0, count = 0;
 
 	while (count < 10)
 	{
-		j = 48;
-		while (i < 49)
+		while (i < 1)
 		{
-			if (i < 48)
+			j = 0;
+			if (i < 0)
 			{
-				_putchar(i);
+				_putchar('0' + i);
 			}
-			while (j <= 57)
+			while (j <= 9)
 			{
-				if (i == 49 && j == 52)
+				if (i == 1 && j == 4)
 				{
 					break;
 				}
-				_putchar(j);
+				_putchar('0' + j);
 				j++;
 			}
 			i++;
