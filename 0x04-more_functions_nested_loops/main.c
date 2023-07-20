@@ -5,8 +5,9 @@
 #include "7-print_diagonal.c"
 #include "8-print_square.c"
 #include "10-print_triangle.c"
+#include "101-print_number.c"
 
 int main(void)
 {
-	print_triangle(3);
+	print_number(123);
 }
