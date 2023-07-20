@@ -12,7 +12,7 @@ void more_numbers(void)
 
 	while (count < 10)
 	{
-		j = 0;
+		j = 48;
 		while (i < 49)
 		{
 			if (i < 48)
