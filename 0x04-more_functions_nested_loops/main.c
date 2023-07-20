@@ -9,5 +9,5 @@
 
 int main(void)
 {
-	print_number(123);
+	print_number(-123);
 }

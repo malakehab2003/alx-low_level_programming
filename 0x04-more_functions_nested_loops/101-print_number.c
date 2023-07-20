@@ -10,18 +10,43 @@
 
 void print_number(int n)
 {
-	if (n < 0)
+	int reversed = 0;
+	int digit;
+	int is_negative = 0;
+
+	if (n == 0)
 	{
-		_putchar('-');
-		n = -n;
+		_putchar('0');
+		_putchar('\n');
 	}
+	else
+    	{
+		if (n < 0)
+		{
+			is_negative = 1;
+			n = -n;
+		}
 
-	if (n >= 10)
-	{
-		print_number(n / 10);
+		while (n > 0)
+		{
+			digit = n % 10;
+			reversed = reversed * 10 + digit;
+			n /= 10;
+		}
+
+		if (is_negative)
+		{
+			_putchar('-');
+		}
+
+		while (reversed > 0)
+		{
+			digit = reversed % 10;
+			_putchar('0' + digit);
+			reversed /= 10;
+		}
+
+		_putchar('\n');
 	}
-
-	_putchar('0' + n % 10);
-	_putchar('\n');
-
 }
+
