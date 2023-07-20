@@ -10,5 +10,21 @@
 
 int main(void)
 {
-	printf("6857\n");
+	long int n = 612852475143;
+	long int factor = 2;
+    
+	while (n > 1)
+	{
+		if (n % factor == 0)
+		{
+			n /= factor;
+		}
+		else
+		{
+			factor++;
+		}
+	}
+    
+    printf("%ld\n", factor);
+    return 0;
 }
