@@ -10,11 +10,6 @@
 
 void print_line(int n)
 {
-	if (n < 1)
-	{
-		_putchar('\n');
-	}
-
 	for (; n > 0; n--)
 	{
 		_putchar('_');

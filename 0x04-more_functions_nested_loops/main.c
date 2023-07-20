@@ -5,5 +5,5 @@
 
 int main(void)
 {
-	print_line(3);
+	print_line(-1);
 }
