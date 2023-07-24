@@ -5,7 +5,7 @@
  *
  * Return: pointer to string
  *
- * @dest: the place to paste in 
+ * @dest: the place to paste in
  * @src: the place to copy from
 */
 
