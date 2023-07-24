@@ -20,7 +20,7 @@ int _atoi(char *s)
 			{
 				if (s[i] == j)
 				{
-					count += j;
+					count += 'j';
 				}
 				count *= 10;
 				j++;
