@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - change int into string
+ * _aiot - change int into string
  *
  * Return: the intger in the string
  *
@@ -16,11 +16,11 @@ int _atoi(char *s)
 	{
 		if (s[i] == '-' && count == 0)
 		{
-			sign = -1;
+			sign *= -1;
 		}
 		else if (s[i] == '+' && count == 0)
 		{
-			sign = 1;
+			sign *= 1;
 		}
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
