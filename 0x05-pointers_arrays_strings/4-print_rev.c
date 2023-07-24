@@ -12,12 +12,12 @@ int size(char *s);
 
 void print_rev(char *s)
 {
-	int size = size(*s);
+	int siz = size(s);
 
-	while (size > -1)
+	while (siz > -1)
 	{
-		_putchar(*(s + size));
-		size--;
+		_putchar(*(s + siz));
+		siz--;
 	}
 
 	_putchar('\n');
