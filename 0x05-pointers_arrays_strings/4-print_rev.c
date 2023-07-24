@@ -12,7 +12,7 @@ int size(char *s);
 
 void print_rev(char *s)
 {
-	int size = size(char *s);
+	int size = size(*s);
 
 	while (size > -1)
 	{
