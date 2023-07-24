@@ -10,24 +10,27 @@
 
 int _atoi(char *s)
 {
-	int i = 0, j = 48, count = 0;
+	int i = 0, sign = 1, count = 0;
 
 	while (s[i] != '\0')
 	{
-		if (s[i] >= 48 && s[i] <= 57)
+		if (s[i] == '-' && count == 0)
 		{
-			while (j <= 57)
-			{
-				if (s[i] == j)
-				{
-					count += 'j';
-				}
-				count *= 10;
-				j++;
-			}
+			sign = -1;
+		}
+		else if (s[i] == '+' && count == 0)
+		{
+			sign = 1;
+		}
+		else if (s[i] >= '0' && s[i] <= '9')
+		{
+			count = count * 10 + (s[i] - '0');
+		}
+		else if (count > 0)
+		{
+			break;
 		}
 		i++;
 	}
-	return (count);
-
+	return (count * sign);
 }
