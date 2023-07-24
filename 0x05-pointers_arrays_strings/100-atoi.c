@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _aiot - change int into string
+ * _atoi - change int into string
  *
  * Return: the intger in the string
  *
