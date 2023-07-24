@@ -6,17 +6,17 @@
  *
  * Return: void
  *
- *@str: 
+ *@str: the string
 */
 
 void puts_half(char *str)
 {
 	int i = _strlen(str);
 
-	if (i % 2== 0)
+	if (i % 2 == 0)
 	{
-		i /=2;
-		while(str[i] != '\0')
+		i /= 2;
+		while (str[i] != '\0')
 		{
 			_putchar(str[i]);
 			i++;
@@ -25,7 +25,7 @@ void puts_half(char *str)
 	else
 	{
 		i = (i - 1) / 2;
-		while(str[i] != '\0')
+		while (str[i] != '\0')
 		{
 			_putchar(str[i]);
 			i++;
