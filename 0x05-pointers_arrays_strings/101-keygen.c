@@ -11,7 +11,7 @@
 int main(void)
 {
 	int sum;
-	char c;:x
+	char c;
 
 	srand(time(NULL));
 	while (sum <= 2645)
