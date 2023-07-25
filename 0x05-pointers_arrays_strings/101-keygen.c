@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <unistd.h>
-#include "main.h"
 #include <time.h>
 #include <stdlib.h>
 
@@ -13,7 +11,7 @@
 int main(void)
 {
 	int sum;
-	char c;
+	char c;:x
 
 	srand(time(NULL));
 	while (sum <= 2645)
