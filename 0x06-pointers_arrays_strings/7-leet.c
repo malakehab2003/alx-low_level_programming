@@ -11,11 +11,12 @@
 char *leet(char *s)
 {
 	int i = 0, j = 0;
-	char ss[] = "aAeEoOtTlL"
-	char n[] = "4433007711"
+	char ss[] = "aAeEoOtTlL";
+	char n[] = "4433007711";
 
 	while (s[i] != '\0')
 	{
+		j = 0;
 		while (j < 10)
 		{
 			if (s[i] == ss[j])
