@@ -7,6 +7,8 @@
  * Return: the number
 */
 
+int _atoi(char *);
+
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int no1 = _atoi(n1), no2 = _atoi(n2), result, count = 0, cp, resultcp;
