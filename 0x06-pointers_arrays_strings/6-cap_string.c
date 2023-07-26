@@ -10,7 +10,7 @@
 
 char *cap_string(char *s)
 {
-	int i = 0;
+	int i = 0, j;
 
 	for (; s[i] != '\0'; i++)
 	{
@@ -29,9 +29,7 @@ char *cap_string(char *s)
 		s[i] == '}' ||
 		i == 0)
 		{
-			i++;
-
-			int j = i + 1;
+			j = i + 1;
 
 			if (s[j] >= 97 && s[j] <= 122)
 			{
@@ -45,7 +43,6 @@ char *cap_string(char *s)
 		}
 		else
 		{
-			i++;
 			continue;
 		}
 	}
