@@ -10,7 +10,9 @@
 
 char *string_toupper(char *s)
 {
-	for (int i = 0; s[i] != '\0'; i++)
+	int i = 0;
+
+	for (; s[i] != '\0'; i++)
 	{
 		if (s[i] >= 97 && s[i] <= 122)
 		{
