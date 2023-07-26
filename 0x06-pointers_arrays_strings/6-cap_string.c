@@ -26,8 +26,7 @@ char *cap_string(char *s)
 		s[i] == '(' ||
 		s[i] == ')' ||
 		s[i] == '{' ||
-		s[i] == '}' ||
-		i == 0)
+		s[i] == '}')
 		{
 			j = i + 1;
 
@@ -45,6 +44,11 @@ char *cap_string(char *s)
 		{
 			continue;
 		}
+	}
+	if (s[0] >= 97 && s[0] <= 122)
+	{
+		s[0] -= 97;
+		s[0] += 65;
 	}
 	return (s);
 }
