@@ -7,11 +7,11 @@
  * Return: the number
 */
 
-long _atoi(char *);
+long long _atoi(char *);
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int no1 = _atoi(n1), no2 = _atoi(n2), result, count = 0, cp, resultcp;
+	long long no1 = _atoi(n1), no2 = _atoi(n2), result, count = 0, cp, resultcp;
 
 	result = no1 + no2;
 	resultcp = result;
@@ -46,10 +46,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
  *@s: the string to convert
 */
 
-long _atoi(char *s)
+long long _atoi(char *s)
 {
-	int i = 0, sign = 1;
-	unsigned long count = 0;
+	long long i = 0, sign = 1;
+	unsigned long long count = 0;
 
 	while (s[i] != '\0')
 	{
