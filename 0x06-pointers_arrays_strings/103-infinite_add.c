@@ -22,7 +22,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		result /= 10;
 	}
 	
-	if (count >= size_r)
+	if (count + 1 > size_r)
 	{
 		return (0);
 	}
