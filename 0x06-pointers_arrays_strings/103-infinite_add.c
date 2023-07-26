@@ -29,7 +29,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	while (resultcp > 0)
 	{
 		cp = resultcp;
-		r[count] = 'cp % 10';
+		r[count] = cp % 10 + '0';
 		result /= 10;
 		count--;
 	}
