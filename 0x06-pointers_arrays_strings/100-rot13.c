@@ -16,6 +16,7 @@ char *rot13(char *s)
 
 	for (; s[i] != '\0'; i++)
 	{
+	j = 0;
 		for (; j < (26 * 2); j++)
 		{
 			if (s[i] == b[j])
@@ -24,4 +25,5 @@ char *rot13(char *s)
 			}
 		}
 	}
+	return (s);
 }
