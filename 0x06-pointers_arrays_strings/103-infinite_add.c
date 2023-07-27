@@ -4,72 +4,65 @@
 /**
  * infinite_add - add numbers
  *
- * Return: the number
+ * Return: the number of the sum
+ *
+ *@n1: first number to sum
+ *@n2: second number to sum
+ *@r: the array to count the sum
+ *@size_r: the size of r
 */
 
-long long _atoi(char *);
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	long long no1 = _atoi(n1), no2 = _atoi(n2), result, count = 0, cp, resultcp;
+	int i = 0, j = 0, k, l = 0, f, s, d = 0;
 
-	result = no1 + no2;
-	resultcp = result;
-	
-	while (result > 0)
+	while (n1[i] != '\0')
 	{
-		count++;
-		result /= 10;
+		i++;
 	}
-	
-	if (count + 1 > size_r)
+	while (n2[j] != '\0')
+		j++;
+	if (i > j)
+	{
+		l = i;
+	}
+	else
+	{
+		l = j;
+	}
+
+	if (l + 1 > size_r)
 	{
 		return (0);
 	}
-	r[count] = '\0';
-	count--;
-	while (resultcp > 0)
+	r[l] = '\0';
+	
+	for (k = l - 1; k >= 0; k--)
 	{
-		cp = resultcp;
-		r[count] = (cp % 10) - '0';
-		resultcp /= 10;
-		count--;
+		i--;
+		j--;
+		if (i >= 0)
+			f = n1[i] - '0';
+		else
+			f = 0;
+		if (j >= 0)
+			s = n2[j] - '0';
+		else
+			s = 0;
+		r[k] = (f + s + d) % 10 + '0';
+		d = (f + s + d) / 10;
+	}
+	if (d == 1)
+	{
+		r[l + 1] = '\0';
+		if (l + 2 > size_r)
+			return (0);
+		while (l-- >= 0)
+		{
+			r[l + 1] = r[l];
+		}
+		r[0] = d + '0';
 	}
 	return (r);
-}
-
-/**
- * _atoi - change int into string
- *
- * Return: the intger in the string
- *
- *@s: the string to convert
-*/
-
-long long _atoi(char *s)
-{
-	long long i = 0, sign = 1;
-	unsigned long long count = 0;
-
-	while (s[i] != '\0')
-	{
-		if (s[i] == '-' && count == 0)
-		{
-			sign *= -1;
-		}
-		else if (s[i] == '+' && count == 0)
-		{
-			sign *= 1;
-		}
-		else if (s[i] >= '0' && s[i] <= '9')
-		{
-			count = count * 10 + (s[i] - '0');
-		}
-		else if (count > 0)
-		{
-			break;
-		}
-		i++;
-	}
-	return (count * sign);
 }
