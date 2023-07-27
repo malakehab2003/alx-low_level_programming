@@ -1,5 +1,4 @@
 #include "main.h"
-#include "atoi.c"
 
 /**
  * infinite_add - add numbers
