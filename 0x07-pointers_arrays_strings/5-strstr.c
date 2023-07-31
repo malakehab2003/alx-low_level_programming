@@ -1,16 +1,20 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * _strstr - find string in a string
  *
- * Return: Always 0 (Success)
+ * Return: a pointer to the string
+ *
+ * @haystack: the string to search in
+ *
+ * @needle: the string to search for
 */
 
 char *_strstr(char *haystack, char *needle)
 {
 	int i = 0, j = 0, count = 0, count2 = 0, k = 0;
 
-	for (;needle[k] != '\0'; k++)
+	for (; needle[k] != '\0'; k++)
 	{
 		count++;
 	}
