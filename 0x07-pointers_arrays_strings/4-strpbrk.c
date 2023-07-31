@@ -12,31 +12,15 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int i = 0, j = 0, count = 0, k = 0, count2 = 0;
-
-	for (; accept[k] != '\0'; k++)
-	{
-		count++;
-	}
+	int i = 0, j = 0;
 
 	for (; s[i] != '\0'; i++)
 	{
-		if (accept[j] == s[i])
+		for (; accept[j] != '\0'; j++)
 		{
-			for (j = 0; accept[j] != '\0'; j++)
-			{
-				if (accept[j] == s[i + j])
-				{
-					count2++;
-				}
-			}
-			if (count == count2)
+			if (accept[j] == s[i])
 			{
 				return (&s[i]);
-			}
-			else
-			{
-				return (0);
 			}
 		}
 	}
