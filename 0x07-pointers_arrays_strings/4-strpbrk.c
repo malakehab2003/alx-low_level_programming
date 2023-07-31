@@ -32,7 +32,7 @@ char *_strpbrk(char *s, char *accept)
 			}
 			if (count == count2)
 			{
-				return ($s[i]);
+				return (&s[i]);
 			}
 		}
 	}
