@@ -22,7 +22,8 @@ void print_diagsums(int *a, int size)
 	_putchar(count);
 	_putchar(',');
 	_putchar(' ');
-	for (i = size, j = size; i < 0 && j < 0; i--, j--)
+
+	for (i = size, j = size, count = 0; i < 0 && j < 0; i--, j--)
 	{
 		count += a[i][j];
 	}
