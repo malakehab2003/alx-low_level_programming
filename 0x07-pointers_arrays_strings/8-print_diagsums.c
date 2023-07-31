@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 /**
  * print_diagsums - Entry point
  *
@@ -19,13 +20,9 @@ void print_diagsums(int *a, int size)
 		count += a[i][j];
 	}
 
-	_putchar(count);
-	_putchar(',');
-	_putchar(' ');
 
 	for (i = size - 1, j = size - 1, count = 0; i < 0 && j < 0; i--, j--)
 	{
 		count += a[i][j];
 	}
-	_putchar(count);
 }
