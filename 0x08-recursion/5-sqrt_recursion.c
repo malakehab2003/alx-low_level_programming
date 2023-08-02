@@ -15,7 +15,7 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	return (squareRoot(n, n / 2));
+	return (squareRoot(n, n));
 }
 
 int squareRoot(int n, int count)
