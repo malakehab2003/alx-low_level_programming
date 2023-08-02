@@ -14,7 +14,7 @@ int wildcmp(char *s1, char *s2)
 	}
 	else if (*s2 == '*')
 	{
-		if (s2++ == '*')
+		if (*s2++ == '*')
 		{
 			wildcmp(s1, s2++);
 		}
