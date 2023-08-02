@@ -45,7 +45,7 @@ int pal(char *s, int n, int strlen)
 	{
 		return (0);
 	}
-	if (n < strlen / 2)
+	if (n >= strlen)
 	{
 		return (1);
 	}
