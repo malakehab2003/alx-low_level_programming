@@ -19,6 +19,16 @@ int is_prime_number(int n)
 	return (isprime(n, 2));
 }
 
+/**
+ * isprime - see if the number is prime or not
+ *
+ * Return: 1 if prime
+ *
+ * @n: the number to see if prime
+ *
+ * @count: the ittiratrion
+*/
+
 int isprime(int n, int count)
 {
 	if (n % count == 0)
