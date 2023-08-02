@@ -26,5 +26,5 @@ int isprime(int n, int count)
 	if (count <= 1)
 		return (1);
 
-	return (prime(n, count - 1);
+	return (isprime(n, count - 1);
 }
