@@ -39,6 +39,18 @@ int _strlen_recursion(char *s)
 	return (count + _strlen_recursion(s + 1));
 }
 
+/**
+ * is_palindrome - check if the string is empty
+ *
+ * Return: 1 if empty
+ *
+ * @s: the string
+ *
+ * @n: the number to itterate
+ *
+ * @strlen: the length of the string
+*/
+
 int pal(char *s, int n, int strlen)
 {
 	if (*(s + n) != *(s + strlen))
