@@ -22,6 +22,16 @@ int _sqrt_recursion(int n)
 	return (squareRoot(n, 0));
 }
 
+/**
+ * squareRoot - calculate the square root of the number
+ *
+ * Return: the square root
+ *
+ * @n: the number to count its square root
+ *
+ * @count: the number to ittirate to numbers
+*/
+
 int squareRoot(int n, int count)
 {
 	if (count * count > n)
