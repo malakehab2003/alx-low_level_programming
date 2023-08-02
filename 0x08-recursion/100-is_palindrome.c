@@ -40,7 +40,7 @@ int _strlen_recursion(char *s)
 }
 
 /**
- * is_palindrome - check if the string is empty
+ * pal - check if the string is empty
  *
  * Return: 1 if empty
  *
