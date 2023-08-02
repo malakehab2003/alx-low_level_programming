@@ -16,15 +16,15 @@ int is_prime_number(int n)
 	{
 		return (0);
 	}
-	return (isprime(n, n / 2));
+	return (isprime(n, 2));
 }
 
 int isprime(int n, int count)
 {
 	if (n % count == 0)
 		return (0);
-	if (count <= 1)
+	if (count >= n / 2)
 		return (1);
 
-	return (isprime(n, count - 1));
+	return (isprime(n, count + 1));
 }
