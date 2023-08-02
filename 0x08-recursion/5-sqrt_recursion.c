@@ -15,12 +15,16 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	return (squareRoot(n, n));
+	else if (n == 1)
+		return (1);
+	else if (n == 0)
+		return (0);
+	return (squareRoot(n, 0));
 }
 
 int squareRoot(int n, int count)
 {
-	if (count < 1)
+	if (count * count > n)
 	{
 		return (-1);
 	}
@@ -28,5 +32,5 @@ int squareRoot(int n, int count)
 	{
 		return (count);
 	}
-	return (squareRoot(n, count - 1));
+	return (squareRoot(n, count + 1));
 }
