@@ -7,18 +7,26 @@
  *
  * @n: the number to count its square root
 */
+int squareRoot(int,int);
 
 int _sqrt_recursion(int n)
 {
-	int i = n / 2;
-
-	if (n < 1)
+	if (n < 0)
 	{
 		return (-1);
 	}
-	if (i * i != n)
+	return (squareRoot(n, n / 2));
+}
+
+int squareRoot(int n, int count)
+{
+	if (count == 1)
 	{
-		_sqrt_recursion(i - 1);
+		return (-1);
 	}
-	return (i);
+	if (count * count == n)
+	{
+		return (count);
+	}
+	return (squareRoot(n, count - 1));
 }
