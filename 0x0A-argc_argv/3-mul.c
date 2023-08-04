@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	}
 	first = _atoi(argv[1]);
 	second = _atoi(argv[2]);
-	printf("%d\n", firs);
+	printf("%d\n", first);
 
 	return (0);
 }
