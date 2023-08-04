@@ -34,7 +34,7 @@ int main(int argc, char *argv)
 
 	for (; cpargs < argc - 1; cpargs++)
 	{
-		num = _atoi(argv[cpargs];
+		num = _atoi(argv[cpargs]);
 		result += num;
 	}
 
