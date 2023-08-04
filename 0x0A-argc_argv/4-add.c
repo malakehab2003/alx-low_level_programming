@@ -16,7 +16,7 @@ int _atoi(char *s);
 
 int main(int argc, char *argv)
 {
-	int countargs = 1, cpargs = 1, retult = 0, num;
+	int countargs = 1, cpargs = 1, result = 0, num;
 
 	if (argc <= 1)
 	{
@@ -43,8 +43,6 @@ int main(int argc, char *argv)
 	
 	return (0);
 }
-
-#include "main.h"
 
 /**
  * _atoi - change int into string
