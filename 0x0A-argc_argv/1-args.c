@@ -9,5 +9,5 @@
 int main(int argc, char *argv)
 {
 	_putchar(argc);
-	_putchar('\0');
+	_putchar('\n');
 }
