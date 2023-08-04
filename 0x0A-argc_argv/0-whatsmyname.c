@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -8,19 +9,9 @@
 
 int main(int argc __attribute__((unused)), char *argv[])
 {
-	int i, j;
-	char slach = '/';
-	char *name = argv[0];
-
-	for (j = 0; argv[0][j] != '\0'; j++)
-	{
-		if (argv[0][j] == slach)
-		{
-			name = &argv[0][j] + 1;
-		}
-	}
+	int i;
 	for (i = 0; argv[0][i] != '\0'; i++)
 	{
-		_putchar(name[i]);
+		_putchar(argv[0][i]);
 	}
 }
