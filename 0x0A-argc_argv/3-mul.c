@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "main.h"
+#include "atoi.c"
 
-int _atoi(char *s);
+//int _atoi(char *s);
 
 /**
  * main - Entry point
@@ -33,7 +34,7 @@ int main(int argc, char *argv[])
  *
  *@s: the string to convert
 */
-
+/*
 int _atoi(char *s)
 {
 	int i = 0, sign = 1;
@@ -61,3 +62,4 @@ int _atoi(char *s)
 	}
 	return (count * sign);
 }
+*/
