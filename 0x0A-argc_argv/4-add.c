@@ -1,83 +1,71 @@
 #include <stdio.h>
-#include <unistd.h>
-#include "main.h"
-#include <string.h>
+#include <stdlib.h>
 #include <ctype.h>
-
-int _atoi(char *s);
-
+#include <string.h>
 /**
- * main - Entry point
+ * check_num - check - string there are digit
+ * @str: array str
  *
  * Return: Always 0 (Success)
+ */
+int check_num(char *str)
+{
+	/*Declaring variables*/
+	unsigned int count;
+
+	count = 0;
+	while (count < strlen(str)) /*count string*/
+
+	{
+		if (!isdigit(str[count])) /*check if str there are digit*/
+		{
+			return (0);
+		}
+
+		count++;
+	}
+	return (1);
+}
+
+/**
+ * main - Print the name of the program
+ * @argc: Count arguments
+ * @argv: Arguments
  *
- * @argc: the number of the arguments
- *
- * @argv: the arguments
-*/
+ * Return: Always 0 (Success)
+ */
 
 int main(int argc, char *argv[])
+
 {
-	int countargs = 1, cpargs = 1, result = 0, num;
 
-	if (argc <= 1)
-	{
-		printf("0\n");
-	}
+	/*Declaring variables*/
+	int count;
+	int str_to_int;
+	int sum = 0;
 
-	for (; countargs < argc - 1; countargs++)
+	count = 1;
+	while (count < argc) /*Goes through the whole array*/
 	{
-		if (argv[countargs][0] < '0' || argv[countargs][0] > '9' || argv[countargs][0] < '0' || argv[countargs][0] > '9' || !(isdigit(argv[countargs])))
+		if (check_num(argv[count]))
+
+		{
+			str_to_int = atoi(argv[count]); /*ATOI --> convert string to int*/
+			sum += str_to_int;
+		}
+
+		/*Condition if one of the number contains symbols that are not digits*/
+		else
 		{
 			printf("Error\n");
 			return (1);
 		}
+
+		count++;
 	}
 
-	for (; cpargs < argc - 1; cpargs++)
-	{
-		num = _atoi(argv[cpargs]);
-		result += num;
-	}
+	printf("%d\n", sum); /*print sum*/
 
-	printf("%d", result);
-
-	
 	return (0);
 }
 
-/**
- * _atoi - change int into string
- *
- * Return: the intger in the string
- *
- *@s: the string to convert
-*/
-
-int _atoi(char *s)
-{
-	int i = 0, sign = 1;
-	unsigned int count = 0;
-
-	while (s[i] != '\0')
-	{
-		if (s[i] == '-' && count == 0)
-		{
-			sign *= -1;
-		}
-		else if (s[i] == '+' && count == 0)
-		{
-			sign *= 1;
-		}
-		else if (s[i] >= '0' && s[i] <= '9')
-		{
-			count = count * 10 + (s[i] - '0');
-		}
-		else if (count > 0)
-		{
-			break;
-		}
-		i++;
-	}
-	return (count * sign);
-}
