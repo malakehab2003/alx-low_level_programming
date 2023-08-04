@@ -14,7 +14,7 @@ int _atoi(char *s);
  * @argv: the arguments
 */
 
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
 	int countargs = 1, cpargs = 1, result = 0, num;
 
@@ -25,7 +25,7 @@ int main(int argc, char *argv)
 
 	for (; countargs < argc - 1; countargs++)
 	{
-		if (argv[countargs] < '0' || argv[countargs] > '9' || argv[countargs] < '0' || argv[countargs] > '9')
+		if (argv[countargs][0] < '0' || argv[countargs][0] > '9' || argv[countargs][0] < '0' || argv[countargs][0] > '9' || strlen(argv[countargs] >= 1))
 		{
 			printf("Error\n");
 			return (1);
@@ -34,7 +34,7 @@ int main(int argc, char *argv)
 
 	for (; cpargs < argc - 1; cpargs++)
 	{
-		num = _atoi(&argv[cpargs]);
+		num = _atoi(argv[cpargs]);
 		result += num;
 	}
 
