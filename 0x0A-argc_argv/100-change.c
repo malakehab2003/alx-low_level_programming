@@ -50,10 +50,10 @@ int main(int argc, char *argv[])
 		count++;
 		cents -= 2;
 	}
-	while (cents >= 1)
+	while (cents != 0)
 	{
 		count++;
-		cents -= 1;
+		cent--;
 	}
 	printf("%d\n", count);
 	return (0);
