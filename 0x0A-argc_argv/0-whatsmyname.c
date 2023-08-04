@@ -16,11 +16,11 @@ int main(int argc, char *argv[])
 	{
 		if (argv[0][j] == slach)
 		{
-			name = argv[0][j] + 1;
+			name = &argv[0][j] + 1;
 		}
 	}
 	for (i = 0; argv[0][i] != '\0'; i++)
 	{
-		_putchar(*name);
+		_putchar(name[i]);
 	}
 }
