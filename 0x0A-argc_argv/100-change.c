@@ -18,8 +18,16 @@
 
 int main(int argc, char *argv[])
 {
-	int cents = atoi(argv[1]), count = 0;
+	int cents = atoi(argv[1]), count = 0, check = 0;
 
+	while (check < strlen(argv[1]))
+	{
+		if (!isdigit(str[count]))
+		{
+			return (0);
+		}
+		count++;
+	}
 	if (argc != 2)
 	{
 		printf("Error\n");
