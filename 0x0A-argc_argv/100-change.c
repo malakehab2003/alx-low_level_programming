@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
 	while (check < strlen(argv[1]))
 	{
-		if (!isdigit(str[count]))
+		if (!isdigit(argv[1][check]))
 		{
 			return (0);
 		}
