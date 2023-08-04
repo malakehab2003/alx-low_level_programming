@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include "main.h"
 #include <string.h>
+#include <ctype.h>
 
 int _atoi(char *s);
 
@@ -26,7 +27,7 @@ int main(int argc, char *argv[])
 
 	for (; countargs < argc - 1; countargs++)
 	{
-		if (argv[countargs][0] < '0' || argv[countargs][0] > '9' || argv[countargs][0] < '0' || argv[countargs][0] > '9' || strlen(argv[countargs]) >= 1)
+		if (argv[countargs][0] < '0' || argv[countargs][0] > '9' || argv[countargs][0] < '0' || argv[countargs][0] > '9' || !(isdigit(argv[countargs])))
 		{
 			printf("Error\n");
 			return (1);
