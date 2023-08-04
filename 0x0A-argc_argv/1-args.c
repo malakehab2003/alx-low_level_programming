@@ -10,6 +10,5 @@
 int main(int argc, char *argv)
 {
 	(void) argv;
-	_putchar(argc);
-	_putchar('\n');
+	printf("%d", argc);
 }
