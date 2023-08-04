@@ -12,7 +12,7 @@ int _atoi(char *s);
 
 int main(int argc, char *argv[])
 {
-	int i, first, second;
+	int first, second;
 
 	if (argc < 3 || argc > 3)
 	{
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	}
 	first = _atoi(argv[1]);
 	second = _atoi(argv[2]);
-	printf("%d\n", first);
+	printf("%d\n", first * second);
 
 	return (0);
 }
