@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 	while (cents != 0)
 	{
 		count++;
-		cent--;
+		cents--;
 	}
 	printf("%d\n", count);
 	return (0);
