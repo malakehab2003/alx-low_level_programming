@@ -8,6 +8,6 @@
 
 int main(int argc, char *argv)
 {
-	putchar(argc);
-	putchar('\0');
+	_putchar(argc);
+	_putchar('\0');
 }
