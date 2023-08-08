@@ -26,7 +26,7 @@ char *_strdup(char *str)
 		i++;
 	}
 
-	arr = malloc((sizeof(char)) * i);
+	arr = malloc(sizeof(char) * (i + 1));
 	i = 0;
 
 	if (arr == NULL)
@@ -39,6 +39,8 @@ char *_strdup(char *str)
 		arr[i] = str[i];
 		i++;
 	}
+
+	arr[i] = '\0';
 
 	return (arr);
 }
