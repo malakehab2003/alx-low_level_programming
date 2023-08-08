@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * _strdup - duplicate a string
@@ -36,7 +37,7 @@ char *_strdup(char *str)
 	while (str[i] != 0)
 	{
 		arr[i] = str[i];
-		i++:
+		i++;
 	}
 
 	return (arr);
