@@ -17,7 +17,7 @@ char **strtow(char *str)
 	int i, j = 0, f = 0;
 	char **arr;
 
-	if (str == NULL || str == "")
+	if (str == NULL)
 		return (NULL);
 	for (i = 0; i < strlen(str); i++)
 	{
