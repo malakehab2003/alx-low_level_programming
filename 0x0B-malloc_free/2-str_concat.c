@@ -41,7 +41,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		arr[count] = s1[i];
 		i++;
-		count++:
+		count++;
 	}
 	i = 0;
 	while (s2[i] != 0)
