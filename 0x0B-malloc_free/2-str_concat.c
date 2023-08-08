@@ -47,6 +47,8 @@ char *str_concat(char *s1, char *s2)
 	while (s2[i] != 0)
 	{
 		arr[count] = s2[i];
+		i++;
+		count++;
 	}
 	arr[count] = '\0';
 	return (arr);
