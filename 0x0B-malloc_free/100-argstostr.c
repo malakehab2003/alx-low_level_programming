@@ -32,7 +32,7 @@ char *argstostr(int ac, char **av)
 	{
 		len = strlen(av[i]);
 		strncpy(arr + index, av[i], len);
-		infex += len;
+		index += len;
 		arr[index] = '\n';
 		index++;
 	}
