@@ -5,6 +5,8 @@
 #include <ctype.h>
 
 int isnum(char *s);
+int _atoi(char *s);
+void _puts(char *str);
 
 /**
  * main - Entry point
@@ -19,12 +21,12 @@ int main(int argc, char *argv[])
 
 	if (argc != 3 || !isnum(f) || !isnum(s))
 	{
-		printf("Error\n");
+		_puts("Error\n");
 		exit(98);
 	}
-	fi = atoi(f);
-	se = atoi(s);
-	printf("%d\n", se * fi);
+	fi = _atoi(f);
+	se = _atoi(s);
+	_puts("%d\n", se * fi);
 
 	return (0);
 }
@@ -39,4 +41,33 @@ int isnum(char *s)
 			return (0);
 	}
 	return (1);
+}
+
+int _atoi(char *s)
+{
+	int sign = 1, i = 0;
+	unsigned int res = 0;
+
+	while (!(s[i] <= '9' && s[i] >= '0') && s[i] != '\0')
+	{
+		if (s[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	while (s[i] <= '9' && (s[i] >= '0' && s[i] != '\0'))
+	{
+		res = (res * 10) + (s[i] - '0');
+		i++;
+	}
+	res *= sign;
+	return (res);
+}
+
+void _puts(char *str)
+{
+	while (*str != '\0')
+	{
+		_putchar(*str++);
+	}
+		_putchar('\n');
 }
