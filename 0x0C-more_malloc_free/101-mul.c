@@ -21,12 +21,12 @@ int main(int argc, char *argv[])
 
 	if (argc != 3 || !isnum(f) || !isnum(s))
 	{
-		_puts("Error\n");
+		_puts("Error");
 		exit(98);
 	}
 	fi = _atoi(f);
 	se = _atoi(s);
-	_puts("%d\n", se * fi);
+	_puts("%d", se * fi);
 
 	return (0);
 }
