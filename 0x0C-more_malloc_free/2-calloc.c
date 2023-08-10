@@ -23,7 +23,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	arr = malloc(nmemb * size);
 	if (arr == NULL)
 		return (NULL);
-	while (i < nmemb)
+	while (i < nmemb * size)
 	{
 		arr[i] = '0';
 		i++;
