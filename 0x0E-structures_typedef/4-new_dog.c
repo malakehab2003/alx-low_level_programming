@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int strlen(char *s);
+int _strlen(char *s);
 
 /**
  * new_dog - make a new dog
@@ -16,7 +16,7 @@ int strlen(char *s);
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int n = strlen(name), o = strlen(owner), i = 0;
+	int n = _strlen(name), o = _strlen(owner), i = 0;
 	dog_t *new;
 
 	new = malloc(sizeof(dog_t));
@@ -54,12 +54,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 }
 
 /**
- * strlen - string length
+ * _strlen - string length
  *
  * @s: the length of the string
  *
 */
-int strlen(char *s)
+int _strlen(char *s)
 {
 	int i = 0;
 
