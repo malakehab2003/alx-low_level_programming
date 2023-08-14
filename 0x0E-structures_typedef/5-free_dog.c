@@ -3,12 +3,10 @@
 #include <stdio.h>
 
 /**
- * new_dog - creates a new dog
- * @name: name of the dog
- * @age: age of the dog
- * @owner: owner of the dog
+ * free_dog - free the dog
+ * @d: the struct to free
  *
- * Return: pointer to the new dog (Success), NULL otherwise
+ * Return: void
 */
 
 void free_dog(dog_t *d)
