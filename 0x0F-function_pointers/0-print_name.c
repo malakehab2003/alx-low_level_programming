@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <unistd.h>
+#include "main.h"
+#include <stdlib.h>
+
+/**
+ * print_name - print a name
+ *
+ * Return: void
+ *
+ * @name: the name to print
+ *
+ * @f: the function that print the name
+*/
+
+void print_name(char *name, void (*f)(char *))
+{
+	f(name);
+}
