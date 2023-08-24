@@ -35,9 +35,6 @@ list_t *add_node_end(list_t **head, const char *str)
 		*head = new;
 		return (new);
 	}
-	else
-	{
-		itr->next = new;
-	}
+	itr->next = new;
 	return (new);
 }
