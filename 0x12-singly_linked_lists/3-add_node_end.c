@@ -30,8 +30,13 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	new->len = count;
 	new->next = NULL;
-	if (itr ->next == NULL)
+	if (*head == NULL)
 	{
-		*itr->next = &new
+		*head = new;
 	}
+	else
+	{
+		itr->next = new;
+	}
+	return (new);
 }
