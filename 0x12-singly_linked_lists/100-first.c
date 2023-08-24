@@ -1,4 +1,4 @@
-
+#include <stdio.h>
 /**
  * function_run_before_main - function print before main
  *
