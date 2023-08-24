@@ -14,7 +14,7 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new;
 	list_t *itr = *head;
-	int count = 0;
+	unsigned int count = 0;
 
 	while (itr != NULL)
 	{
