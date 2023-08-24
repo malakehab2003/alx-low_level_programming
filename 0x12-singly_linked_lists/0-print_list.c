@@ -14,8 +14,10 @@ size_t print_list(const list_t *h)
 	const list_t *new = h;
 
 	if (h == NULL)
-		return (-1);
-
+	{
+		printf("(nil)\n");
+		return (0);
+	}
 	while (new != NULL)
 	{
 		if (new->str != NULL)
