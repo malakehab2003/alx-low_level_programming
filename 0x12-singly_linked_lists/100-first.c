@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 /**
- * function_run_before_main - function print before main
+ * function - function print before main
  *
  * Return: void
 */
 
-void function_run_before_main(void)__attribute__((constructor));
+void function(void)__attribute__((constructor));
 
-void function_run_before_main(void)
+void function(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
