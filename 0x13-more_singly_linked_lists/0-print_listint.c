@@ -10,9 +10,10 @@
 
 size_t print_listint(const listint_t *h)
 {
-	listint_t *new = h;
-	int count = 0;
+	listint_t *new;
+	unsigned int count = 0;
 
+	new = h;
 	while (new != NULL)
 	{
 		printf("%d\n", new->n);
