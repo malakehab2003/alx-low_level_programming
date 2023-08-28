@@ -17,6 +17,6 @@ void free_listint(listint_t *head)
 	{
 		new = head->next;
 		free(head);
-		head = tmep;
+		head = new;
 	}
 }
