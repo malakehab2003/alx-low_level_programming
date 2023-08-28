@@ -13,7 +13,7 @@ int sum_listint(listint_t *head)
 {
 	unsigned int sum = 0;
 
-	if (head ==NULL)
+	if (head == NULL)
 	{
 		return (0);
 	}
@@ -22,5 +22,5 @@ int sum_listint(listint_t *head)
 		sum += head->n;
 		head = head->next;
 	}
-	return (count);
+	return (sum);
 }
