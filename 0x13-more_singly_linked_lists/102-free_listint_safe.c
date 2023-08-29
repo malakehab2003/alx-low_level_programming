@@ -19,7 +19,7 @@ size_t free_listint_safe(listint_t **h)
 		return (0);
 	while (*h != NULL)
 	{
-		min = *h - (*h->next);
+		min = *h - (*h)->next;
 		if (min > 0)
 		{
 			count++;
