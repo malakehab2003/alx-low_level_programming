@@ -17,10 +17,10 @@ listint_t *find_listint_loop(listint_t *head)
 		return (NULL);
 	while (head != NULL)
 	{
-		min = h - h->next;
+		min = head - head->next;
 		if (min > 0)
 		{
-			return (h);
+			return (head);
 		}
 		head = head->next;
 	}
