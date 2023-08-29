@@ -20,7 +20,7 @@ listint_t *find_listint_loop(listint_t *head)
 		min = head - head->next;
 		if (min > 0)
 		{
-			return (head);
+			return (head->next);
 		}
 		head = head->next;
 	}
