@@ -11,6 +11,8 @@ unsigned int binary_to_uint(const char *b)
 {
         int count = 0, len = 0, power = 0, powercp;
 
+	if (b == NULL)
+		return (0);
         while (b[len] != 0)
         {
                 len++;
@@ -18,10 +20,6 @@ unsigned int binary_to_uint(const char *b)
 	if (len == 0)
 		return (0);
 
-        if (b == NULL)
-        {
-                return (0);
-        }
         len--;
         while (len >= 0)
         {
