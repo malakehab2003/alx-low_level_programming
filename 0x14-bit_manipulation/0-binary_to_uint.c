@@ -15,6 +15,8 @@ unsigned int binary_to_uint(const char *b)
         {
                 len++;
         }
+	if (len == 0)
+		return (0);
 
         if (b == NULL)
         {
@@ -31,6 +33,7 @@ unsigned int binary_to_uint(const char *b)
                                 count *= 2;
                                 powercp--;
                         }
+			count += 1;
                 }
                 else if (b[len] == '0')
                 {
@@ -43,5 +46,5 @@ unsigned int binary_to_uint(const char *b)
                 len--;
                 power++;
         }
-
+	return (count);
 }
