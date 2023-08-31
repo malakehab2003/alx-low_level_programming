@@ -25,13 +25,7 @@ unsigned int binary_to_uint(const char *b)
         {
                 if (b[len] == '1')
                 {
-                        powercp = power;
-                        while (powercp > 0)
-                        {
-                                count *= 2;
-                                powercp--;
-                        }
-			count += 1;
+			count += 1 << power;
                 }
                 else if (b[len] == '0')
                 {
