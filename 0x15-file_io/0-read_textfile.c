@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdio.h>
+#include <fcntl.h>
 
 /**
  * read_textfile - read textfile
@@ -16,7 +17,8 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buffer;
-	ssize_t file, filer, filew;
+	int file
+	ssize_t filer, filew;
 
 	if (filename == NULL)
 		return (0);
@@ -26,7 +28,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer = malloc(sizeof(char) * (letters + 1));
 	if (buffer == NULL)
 	{
-		free(buffer);
 		fclose(file);
 		return (0);
 	}
