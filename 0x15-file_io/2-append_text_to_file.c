@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * append_text - append text
+ * append_text_to_file - append text
  *
  * Return: 1 if success
  *
  * @filename: name of the file
- * 
+ *
  * @text_content: the content of the file
 */
 
