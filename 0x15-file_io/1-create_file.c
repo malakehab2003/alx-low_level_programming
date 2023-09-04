@@ -22,7 +22,7 @@ int create_file(const char *filename, char *text_content)
                 return (-1);
         if (text_content != NULL)
         {
-                while (text_content != 0)
+                while (text_content[len] != 0)
                 {
                         len++;
                 }
@@ -30,7 +30,7 @@ int create_file(const char *filename, char *text_content)
 
         filew = write(file, text_content, len)
 
-        if (filew == NULL)
+        if (filew == -1)
                 return (-1);
 
         close(file);
