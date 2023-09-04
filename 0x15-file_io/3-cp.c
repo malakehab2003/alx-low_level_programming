@@ -13,7 +13,7 @@ void close_the_file(int file);
 
 int main(int argc, char *argv[])
 {
-	ssize_t file, filer, filew, file2;
+	ssize_t file, filer, filew;
 	char *buffer;
 
 	if (argc != 3)
@@ -25,31 +25,49 @@ int main(int argc, char *argv[])
 	if (buffer == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
-	exit(99);	
+		exit(99);	
 	}
 	file = open(argv[1], O_RDONLY);
-	filer = read(file,buffer, 1024);
-	file2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	do{
-		if (file == -1 || filer == -1)
+	if (file == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		free(buffer);
+		exit(98);
+	}
+
+	do {
+		filer = read(file, buffer, 1024);
+		if (filer == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			free(buffer);
+			close_the_file(file);
 			exit(98);
 		}
-		filew = write(file2, buffer, filer);
-		if (file2 == -1 || filew == -1)
+
+		filew = open(argv[2], O_WRONLY | O_CREAT | O_APPEND, 0664);
+		if (filew == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
+			free(buffer);
+			close_the_file(file);
 			exit(99);
 		}
-		filer = read(from, buffer, 1024);
-		filew = open(argv[2], O_WRONLY | O_APPEND);
+
+		if (write(filew, buffer, filer) == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
+			free(buffer);
+			close_the_file(file);
+			close_the_file(filew);
+			exit(99);
+		}
+
+		close_the_file(filew);
 	} while (filer > 0);
 
 	free(buffer);
-	close_the_file(filer);
-	close_the_file(filew);
+	close_the_file(file);
 	return (0);
 }
 
@@ -69,7 +87,8 @@ void close_the_file(int file)
 	x = close(file);
 	if (x == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
 		exit(100);
 	}
 }
+
