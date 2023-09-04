@@ -28,7 +28,7 @@ int create_file(const char *filename, char *text_content)
                 }
         }
 
-        filew = write(file, text_content, len)
+        filew = write(file, text_content, len);
 
         if (filew == -1)
                 return (-1);
