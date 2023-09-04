@@ -29,9 +29,9 @@ int main(int argc, char *argv[])
 	}
 	file = open(argv[1], O_RDONLY);
 	filer = read(file,buffer, 1024);
-	file2 = open(argv[2], O_WRONLY | O_CREATE | O_TRUNC, 0664);
+	file2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	do{
-		if (file == -1 || filer == _1)
+		if (file == -1 || filer == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			free(buffer);
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 		}
 		filer = read(from, buffer, 1024);
 		filew = open(argv[2], O_WRONLY | O_APPEND);
-	} while (r > 0);
+	} while (filer > 0);
 
 	free(buffer);
 	close_the_file(filer);
