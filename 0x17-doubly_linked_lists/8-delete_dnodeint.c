@@ -42,10 +42,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	slow = node->prev;
 	if (fast != NULL)
 		fast->prev = slow;
-	else
-		*head = NULL;
 	if (slow != NULL)
 		slow->next = fast;
 	free(node);
+	node = NULL;
 	return (1);
 }
