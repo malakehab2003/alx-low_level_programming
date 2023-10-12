@@ -11,6 +11,7 @@
 int main(void)
 {
     dlistint_t *head;
+    int i;
 
     head = NULL;
     add_dnodeint_end(&head, 0);
@@ -23,7 +24,7 @@ int main(void)
     add_dnodeint_end(&head, 1024);
     print_dlistint(head);
     printf("-----------------\n");
-    delete_dnodeint_at_index(&head, 5);
+    delete_dnodeint_at_index(&head, 10);
     print_dlistint(head);
     printf("-----------------\n");
     delete_dnodeint_at_index(&head, 0);
@@ -50,7 +51,7 @@ int main(void)
     printf("-----------------\n");
     delete_dnodeint_at_index(&head, 0);
     printf("-----------------\n");
-    delete_dnodeint_at_index(&head, 8);
+    i = delete_dnodeint_at_index(&head, 8);
     printf("-----------------\n");
     delete_dnodeint_at_index(&head, 0);
     printf("-----------------\n");
