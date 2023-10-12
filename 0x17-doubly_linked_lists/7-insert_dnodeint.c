@@ -1,78 +1,54 @@
 #include "lists.h"
 
-void node_pointers(dlistint_t *new, dlistint_t *node, dlistint_t *prev);
-
 /**
- * insert_dnodeint_at_index - insert node at specific index
+ * insert_dnodeint_at_index - inserts a new node at
+ * a given position
  *
- * Return: pointer to the added node
- *
- * @h: the head of the list
- *
- * @idx: the index to add the point in
- *
- * @n: the data in the node
-*/
-
+ * @h: head of the list
+ * @idx: index of the new node
+ * @n: value of the new node
+ * Return: the address of the new node, or NULL if it failed
+ */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new, *node, *prev;
+	dlistint_t *new;
+	dlistint_t *head;
+	unsigned int i;
 
-	new = *h;
-	node = malloc(sizeof(dlistint_t));
-	if (node == NULL)
-		return (NULL);
+	new = NULL;
 	if (idx == 0)
+		new = add_dnodeint(h, n);
+	else
 	{
-		node->n = n;
-		node->next = new;
-		node->prev = NULL;
-		new->prev = node;
-		*h = node;
-		return (*h);
+		head = *h;
+		i = 1;
+		if (head != NULL)
+			while (head->prev != NULL)
+				head = head->prev;
+		while (head != NULL)
+		{
+			if (i == idx)
+			{
+				if (head->next == NULL)
+					new = add_dnodeint_end(h, n);
+				else
+				{
+					new = malloc(sizeof(dlistint_t));
+					if (new != NULL)
+					{
+						new->n = n;
+						new->next = head->next;
+						new->prev = head;
+						head->next->prev = new;
+						head->next = new;
+					}
+				}
+				break;
+			}
+			head = head->next;
+			i++;
+		}
 	}
-	while (idx != 0 && new != NULL)
-	{
-		idx--;
-		new = new->next;
-		if (idx == 1)
-			prev = new;
-	}
-	if (new == NULL && idx != 0)
-	{
-		free(node);
-		return (NULL);
-	}
-	if (idx == 0)
-	{
-		node->next = NULL;
-		node->prev = prev;
-		prev->next = node;
-		node->n = n;
-		return (node);
-	}
-	node->n = n;
-	node_pointers(new, node, prev);
-	return (node);
-}
 
-/**
- * node_pointers - fix pointers
- *
- * Return: void
- *
- * @new: the next node
- *
- * @node: the node to add
- *
- * @prev: the latter node
-*/
-
-void node_pointers(dlistint_t *new, dlistint_t *node, dlistint_t *prev)
-{
-	prev = new->prev;
-	node->next = new;
-	node->prev = prev;
-	new->prev = node;
-	prev->next = node;
+	return (new);
 }
