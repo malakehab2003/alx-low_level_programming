@@ -1,6 +1,8 @@
 #include "search_algos.h"
 #include <math.h>
 
+int linear_s(size_t end, size_t start, int *array, int value);
+
 /**
  * jump_search - search element in array with jump search
  *
@@ -49,13 +51,32 @@ int jump_search(int *array, size_t size, int value)
 	}
 	if (flag == 0)
 		return (-1);
+	return (linear_s(end, start, array, value));
+}
+
+/**
+ * linear_s - search element in array with linear search
+ *
+ * Return: the first index of the searching number
+ *
+ * @end: last element in the array
+ *
+ * @start: first element in the array
+ *
+ * @array: the array to search in
+ *
+ * @value: the value to search for
+*/
+
+int linear_s(size_t end, size_t start, int *array, int value)
+{
 	printf("Value found between indexes [%li] and [%li]\n", start, end);
 	while (start <= end)
 	{
 		printf("Value checked array[%li] = [%i]\n", start, array[start]);
 		if (array[start] == value)
 		{
-			return (start); 
+			return (start);
 		}
 		start++;
 	}
