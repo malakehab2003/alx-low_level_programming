@@ -3,9 +3,9 @@
 void print_array(int *array, size_t start, size_t end);
 
 /**
- * linear_search - search element in array with linear search
+ * binary_search - search element in array with binary search
  *
- * Return: the first index of the searching number
+ * Return: the index of the searching number
  *
  * @array: array of elements
  *
