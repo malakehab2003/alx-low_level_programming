@@ -54,9 +54,7 @@ int binary_search_recursion(int *array, size_t start, size_t end, int value)
 		return (binary_search_recursion(array, start, i, value));
 	else if (array[i] > value)
 		return (binary_search_recursion(array, start, i - 1, value));
-	else
-		return (binary_search_recursion(array, i + 1, end, value));
-	return (-1);
+	return (binary_search_recursion(array, i + 1, end, value));
 }
 
 /**
