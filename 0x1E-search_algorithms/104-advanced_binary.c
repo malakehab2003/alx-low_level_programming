@@ -44,19 +44,18 @@ int binary_search_recursion(int *array, size_t start, size_t end, int value)
 {
 	size_t i;
 
-	while (end >= start)
-	{
-		i = (start + end) / 2;
-		print_array(array, start, end);
-		if (array[i] == value && array[i - 1] != value)
-			return (i);
-		else if (array[i] == value)
-			return (binary_search_recursion(array, start, i, value));
-		else if (array[i] > value)
-			return (binary_search_recursion(array, start, i - 1, value));
-		else
-			return (binary_search_recursion(array, i + 1, end, value));
-	}
+	i = (start + end) / 2;
+	if (end < start)
+		return (-1);
+	print_array(array, start, end);
+	if (array[i] == value && array[i - 1] != value)
+		return (i);
+	else if (array[i] == value)
+		return (binary_search_recursion(array, start, i, value));
+	else if (array[i] > value)
+		return (binary_search_recursion(array, start, i - 1, value));
+	else
+		return (binary_search_recursion(array, i + 1, end, value));
 	return (-1);
 }
 
