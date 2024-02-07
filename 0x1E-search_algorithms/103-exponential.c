@@ -49,13 +49,15 @@ int exponential_search(int *array, size_t size, int value)
 }
 
 /**
- * binary_search - search element in array with binary search
+ * binary_s - search element in array with binary search
  *
  * Return: the index of the searching number
  *
  * @array: array of elements
  *
- * @size: the size of array
+ * @s: the start index
+ *
+ * @e: the end index
  *
  * @value: the value to search for
 */
