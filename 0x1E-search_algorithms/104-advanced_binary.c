@@ -1,6 +1,6 @@
 #include "search_algos.h"
 
-int advanced_binary_recursive(int *array, size_t left, size_t right, int value);
+int advanced_binary_rec(int *array, size_t left, size_t right, int value);
 
 /**
  * advanced_binary - search element in array with advanced binary
@@ -22,11 +22,11 @@ int advanced_binary(int *array, size_t size, int value)
 		return (-1);
 	start = 0;
 	end = size - 1;
-	return (advanced_binary_recursive(array, start, end, value));
+	return (advanced_binary_rec(array, start, end, value));
 }
 
 /**
- * binary_search_recursion - recursive function to search by binary search
+ * advanced_binary_rec - recursive function to search by binary search
  *
  * Return: the first index of the searching number
  *
@@ -39,7 +39,7 @@ int advanced_binary(int *array, size_t size, int value)
  * @right: the end index
 */
 
-int advanced_binary_recursive(int *array, size_t left, size_t right, int value)
+int advanced_binary_rec(int *array, size_t left, size_t right, int value)
 {
 	size_t i;
 
@@ -53,6 +53,6 @@ int advanced_binary_recursive(int *array, size_t left, size_t right, int value)
 	if (array[i] == value && (i == left || array[i - 1] != value))
 		return (i);
 	if (array[i] >= value)
-		return (advanced_binary_recursive(array, left, i, value));
-	return (advanced_binary_recursive(array, i + 1, right, value));
+		return (advanced_binary_rec(array, left, i, value));
+	return (advanced_binary_rec(array, i + 1, right, value));
 }
