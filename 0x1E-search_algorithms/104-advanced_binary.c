@@ -44,7 +44,7 @@ int binary_search_recursion(int *array, size_t start, size_t end, int value)
 {
 	size_t i;
 
-	i = (start + end) / 2;
+	i = start + (end - start) / 2;
 	if (end < start)
 		return (-1);
 	print_array(array, start, end);
