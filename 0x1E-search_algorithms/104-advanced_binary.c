@@ -1,7 +1,6 @@
 #include "search_algos.h"
 
-void print_array(int *array, size_t start, size_t end);
-int binary_search_recursion(int *array, size_t start, size_t end, int value);
+int advanced_binary_recursive(int *array, size_t left, size_t right, int value);
 
 /**
  * advanced_binary - search element in array with advanced binary
@@ -23,7 +22,7 @@ int advanced_binary(int *array, size_t size, int value)
 		return (-1);
 	start = 0;
 	end = size - 1;
-	return (binary_search_recursion(array, start, end, value));
+	return (advanced_binary_recursive(array, start, end, value));
 }
 
 /**
@@ -35,54 +34,25 @@ int advanced_binary(int *array, size_t size, int value)
  *
  * @value: the value to search for
  *
- * @start: the start index
+ * @left: the start index
  *
- * @end: the end index
+ * @right: the end index
 */
 
-int binary_search_recursion(int *array, size_t start, size_t end, int value)
+int advanced_binary_recursive(int *array, size_t left, size_t right, int value)
 {
 	size_t i;
 
-	i = start + (end - start) / 2;
-	if (end < start)
+	if (right < left)
 		return (-1);
-	print_array(array, start, end);
-	if (array[i] == value && array[i - 1] != value)
-		return (i);
-	else if (i == 0)
-		return (i);
-	else if (array[i] == value)
-		return (binary_search_recursion(array, start, i, value));
-	else if (array[i] > value)
-		return (binary_search_recursion(array, start, i - 1, value));
-	return (binary_search_recursion(array, i + 1, end, value));
-}
-
-/**
- * print_array - print givin array
- *
- * Return: void
- *
- * @array: the array to print
- *
- * @start: the first index to array
- *
- * @end: the last index of the array
-*/
-
-void print_array(int *array, size_t start, size_t end)
-{
-	size_t i;
-
 	printf("Searching in array: ");
-	for (i = start; i <= end; i++)
-	{
-		if (i == end)
-		{
-			printf("%i\n", array[i]);
-			return;
-		}
-		printf("%i, ", array[i]);
-	}
+	for (i = left; i < right; i++)
+		printf("%d, ", array[i]);
+	printf("%d\n", array[i]);
+	i = left + (right - left) / 2;
+	if (array[i] == value && (i == left || array[i - 1] != value))
+		return (i);
+	if (array[i] >= value)
+		return (advanced_binary_recursive(array, left, i, value));
+	return (advanced_binary_recursive(array, i + 1, right, value));
 }
