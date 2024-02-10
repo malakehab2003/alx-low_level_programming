@@ -24,7 +24,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	sr = sqrt(size);
 	i = sr;
 	flag = 0;
-	while (i - 1 <= size)
+	while (i - 2 <= size)
 	{
 		start = new;
 		interval = 0;
