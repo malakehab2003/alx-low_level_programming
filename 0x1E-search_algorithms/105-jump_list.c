@@ -81,5 +81,11 @@ listint_t *linear_s_list(listint_t *start, listint_t *end, int value)
 			return (start);
 		start = start->next;
 	}
+	printf("Value checked at index [%li] = [%i]\n", start->index, start->n);
+	if (start->n == value)
+	{
+		printf("Value checked at index [%li] = [%i]\n", start->index, start->n);
+		return (start);
+	}
 	return (NULL);
 }
